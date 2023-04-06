@@ -136,7 +136,7 @@ extension ACarouselViewModel {
     
     var offsetAnimation: Animation? {
         guard isWrap else {
-            return .spring()
+            return .timingCurve(0.45, 0.97, 0.45, 0.97)
         }
         return isAnimatedOffset ? .spring() : .none
     }
