@@ -138,7 +138,7 @@ extension ACarouselViewModel {
         guard isWrap else {
             return .timingCurve(0.45, 0.97, 0.45, 0.97)
         }
-        return isAnimatedOffset ? .spring() : .none
+        return isAnimatedOffset ? .timingCurve(0.45, 0.97, 0.45, 0.97) : .none
     }
     
     var itemWidth: CGFloat {
